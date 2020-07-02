@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "e1d02dd8-1ee6-4cbe-898f-2bc1361225ab",
+		"name": "bachelor cdc blueprint",
+		"description": "Contains the blueprint for DiscountService endpoints, with example requests and responses and mock server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllCalculations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4235/discount/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4235",
+					"path": [
+						"discount",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4235/discount/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4235",
+							"path": [
+								"discount",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 May 2020 18:53:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "9495"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 92,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T16:17:56.917634\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 93,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T16:21:49.9963252\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 94,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T16:22:45.2357402\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 95,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T16:47:18.2722664\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 96,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T17:22:35.7542154\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 97,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T17:23:46.0116744\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 98,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T17:25:51.7383799\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 99,\n        \"discountedPrice\": 9.2,\n        \"moneySavedInCard\": 0.37,\n        \"createdOn\": \"2020-05-17T18:03:27.4567122\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 10,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 100,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-17T18:07:24.7533061\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 101,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T14:39:29.7952716\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 2,\n        \"customerType\": 0,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 102,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T16:32:20.4688641\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 103,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T16:34:12.3846628\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 104,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T16:42:23.2827105\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 105,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T16:42:41.1459549\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 106,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T16:42:52.1705705\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 107,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T18:17:36.3251235\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 108,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T19:05:46.9304401\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 109,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-18T19:07:19.5633582\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 110,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-20T16:23:26.6885511\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 111,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-20T16:23:43.8084658\",\n        \"discountPercent\": 0,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 112,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:15:55.5749076\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 113,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:16:58.5174021\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 114,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:17:04.5721978\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 115,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:25:21.2389171\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 116,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:25:28.3126664\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 117,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:34:56.9701214\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 118,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:36:50.0142144\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 119,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:37:01.3432164\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 120,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:40:40.674918\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 121,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:40:53.4458313\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 122,\n        \"discountedPrice\": 19,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T15:52:16.0040694\",\n        \"discountPercent\": 0.05,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 123,\n        \"discountedPrice\": 18.8,\n        \"moneySavedInCard\": 0.38,\n        \"createdOn\": \"2020-05-21T15:52:23.1435299\",\n        \"discountPercent\": 0.06,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 2,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 124,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:05:32.4623381\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 125,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:05:37.3340588\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 126,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:06:19.7717736\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 127,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:06:28.2098918\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 128,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:06:51.7451446\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 129,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:07:34.3669698\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 130,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T16:14:11.9281054\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 131,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-21T16:21:49.0914936\",\n        \"discountPercent\": 0.16,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 132,\n        \"discountedPrice\": 0,\n        \"moneySavedInCard\": 0,\n        \"createdOn\": \"2020-05-21T16:24:49.5110993\",\n        \"discountPercent\": 0.16,\n        \"originalPrice\": 0,\n        \"loyaltyType\": 0,\n        \"customerType\": 0,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 133,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:39:16.7738528\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 134,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:39:30.4819082\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 135,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:41:19.3187781\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 136,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:44:07.5122567\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": 0\n    },\n    {\n        \"id\": 137,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:53:27.0735679\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    },\n    {\n        \"id\": 138,\n        \"discountedPrice\": 18,\n        \"moneySavedInCard\": null,\n        \"createdOn\": \"2020-05-21T21:53:31.907363\",\n        \"discountPercent\": 0.1,\n        \"originalPrice\": 20,\n        \"loyaltyType\": 1,\n        \"customerType\": 2,\n        \"discountOnProduct\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "CalculateDiscount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b0e9a85-bc8f-40d8-b5fe-2cb03253bca0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"originalPrice\": 20,\n\t\"loyaltyType\": 1,\n\t\"customerType\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4235/discount/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4235",
+					"path": [
+						"discount",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CalculateDiscount",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"originalPrice\": 20,\n\t\"loyaltyType\": 1,\n\t\"customerType\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4235/discount/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4235",
+							"path": [
+								"discount",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 May 2020 18:54:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 139,\n    \"discountedPrice\": 18,\n    \"moneySavedInCard\": null,\n    \"createdOn\": \"2020-05-21T21:54:34.4938048+03:00\",\n    \"discountPercent\": 0.1,\n    \"originalPrice\": 20,\n    \"loyaltyType\": 1,\n    \"customerType\": 2,\n    \"discountOnProduct\": null\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "90cd4c79-8e40-4105-bc5f-361683beec63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b5ee9799-f3a2-49fa-b4f5-0d4f5ca22cc3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

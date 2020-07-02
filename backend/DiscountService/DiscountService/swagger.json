@@ -1,0 +1,150 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DiscountService API",
+    "version": "v1"
+  },
+  "paths": {
+    "/Discount": {
+      "get": {
+        "tags": [
+          "Discount"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CalculationsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Discount"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculateDiscountRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoyaltyType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "SpecialCustomers": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CalculationsResponse": {
+        "required": [
+          "customerType",
+          "loyaltyType",
+          "originalPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discountedPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "moneySavedInCard": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "originalPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "loyaltyType": {
+            "$ref": "#/components/schemas/LoyaltyType"
+          },
+          "customerType": {
+            "$ref": "#/components/schemas/SpecialCustomers"
+          },
+          "discountOnProduct": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalculateDiscountRequest": {
+        "required": [
+          "customerType",
+          "loyaltyType",
+          "originalPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "loyaltyType": {
+            "$ref": "#/components/schemas/LoyaltyType"
+          },
+          "customerType": {
+            "$ref": "#/components/schemas/SpecialCustomers"
+          },
+          "discountOnProduct": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

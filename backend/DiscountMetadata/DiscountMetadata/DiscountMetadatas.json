@@ -1,0 +1,37 @@
+{
+  "DiscountMetadataList": {
+    "Iki": {
+      "CustomerDiscount": {
+        "Regular": null,
+        "LargeFamily": null,
+        "Pensioner": 0.2,
+        "Student": null
+      },
+      "PercentDepositedInCard": null,
+      "DiscountFromLoyalty": 0.08,
+      "AreDiscountsSummed": false
+    },
+    "Maxima": {
+      "CustomerDiscount": {
+        "Regular": null,
+        "LargeFamily": null,
+        "Pensioner": 0.14,
+        "Student": 0.06
+      },
+      "PercentDepositedInCard": null,
+      "DiscountFromLoyalty": 0.04,
+      "AreDiscountsSummed": true
+    },
+    "Rimi": {
+      "CustomerDiscount": {
+        "Regular": null,
+        "LargeFamily": 0.2,
+        "Pensioner": 0.3,
+        "Student": 0.2
+      },
+      "PercentDepositedInCard": 0.08,
+      "DiscountFromLoyalty": 0.16,
+      "AreDiscountsSummed": false
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "477ef230-9421-4634-a238-3b67511afaa4",
+		"name": "bachelor cdc contract",
+		"description": "Contains tests to verify the contract of DiscountService blueprint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllCalculations verification",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f3b4f973-41a9-4da5-9b13-fb60bc8d487d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0fc255b4-455d-481d-8aed-dd5381462973",
+						"exec": [
+							"const getCalculationsSchema = {\r",
+							"  \"type\": \"array\",\r",
+							"  \"additionalProperties\": false,\r",
+							"  \"items\": [\r",
+							"    {\r",
+							"      \"type\": \"object\",\r",
+							"      \"properties\": {\r",
+							"        \"id\": {\r",
+							"          \"type\": \"integer\"\r",
+							"        },\r",
+							"        \"discountedPrice\": {\r",
+							"          \"type\": \"number\"\r",
+							"        },\r",
+							"        \"moneySavedInCard\": {\r",
+							"          \"anyOf\": [\r",
+							"            {\r",
+							"              \"type\": \"number\",\r",
+							"              \"minimum\": 0\r",
+							"            },\r",
+							"            {\r",
+							"              \"type\": \"null\"\r",
+							"            }\r",
+							"          ]\r",
+							"        },\r",
+							"        \"createdOn\": {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        \"originalPrice\": {\r",
+							"          \"type\": \"number\"\r",
+							"        },\r",
+							"        \"loyaltyType\": {\r",
+							"          \"type\": \"integer\"\r",
+							"        },\r",
+							"        \"customerType\": {\r",
+							"          \"type\": \"integer\"\r",
+							"        },\r",
+							"        \"discountOnProduct\": {\r",
+							"          \"anyOf\": [\r",
+							"            {\r",
+							"              \"type\": \"number\",\r",
+							"              \"minimum\": 0\r",
+							"            },\r",
+							"            {\r",
+							"              \"type\": \"null\"\r",
+							"            }\r",
+							"          ],\r",
+							"          \"discountPercent\": {\r",
+							"          \"type\": \"number\",\r",
+							"          \"minimum\": 0\r",
+							"    }\r",
+							"        }\r",
+							"      },\r",
+							"      \"required\": [\r",
+							"        \"id\",\r",
+							"        \"discountedPrice\",\r",
+							"        \"moneySavedInCard\",\r",
+							"        \"createdOn\",\r",
+							"        \"originalPrice\",\r",
+							"        \"loyaltyType\",\r",
+							"        \"customerType\",\r",
+							"        \"discountOnProduct\",\r",
+							"         \"discountPercent\"\r",
+							"      ]\r",
+							"    }\r",
+							"  ]\r",
+							"};\r",
+							"\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"  pm.response.to.not.be.error;\r",
+							"  pm.response.to.be.ok;\r",
+							"  pm.response.to.be.json;\r",
+							"  pm.response.to.have.jsonSchema(getCalculationsSchema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://be81601c-7e4d-418e-a6b6-f517b3e5e422.mock.pstmn.io/discount",
+					"protocol": "https",
+					"host": [
+						"be81601c-7e4d-418e-a6b6-f517b3e5e422",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateDiscount verification",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b0e9a85-bc8f-40d8-b5fe-2cb03253bca0",
+						"exec": [
+							"",
+							"const calculateDiscountSchema = {",
+							"  \"type\": \"object\",",
+							"  \"additionalProperties\": false,",
+							"  \"properties\": {",
+							"    \"id\": {",
+							"      \"type\": \"integer\"",
+							"    },",
+							"    \"discountedPrice\": {",
+							"      \"type\": \"number\"",
+							"    },",
+							"    \"moneySavedInCard\": {",
+							"      \"anyOf\": [",
+							"        {",
+							"          \"type\": \"number\",",
+							"          \"minimum\": 0",
+							"        },",
+							"        {",
+							"          \"type\": \"null\"",
+							"        }",
+							"      ]",
+							"    },",
+							"    \"createdOn\": {",
+							"      \"type\": \"string\"",
+							"    },",
+							"    \"originalPrice\": {",
+							"      \"type\": \"number\"",
+							"    },",
+							"    \"loyaltyType\": {",
+							"      \"type\": \"integer\"",
+							"    },",
+							"    \"customerType\": {",
+							"      \"type\": \"integer\"",
+							"    },",
+							"    \"discountOnProduct\": {",
+							"      \"anyOf\": [",
+							"        {",
+							"          \"type\": \"number\",",
+							"          \"minimum\": 0",
+							"        },",
+							"        {",
+							"          \"type\": \"null\"",
+							"        }",
+							"      ]",
+							"    },",
+							"    \"discountPercent\": {",
+							"          \"type\": \"number\",",
+							"          \"minimum\": 0",
+							"    }",
+							"  },",
+							"  \"required\": [",
+							"    \"id\",",
+							"    \"discountedPrice\",",
+							"    \"moneySavedInCard\",",
+							"    \"createdOn\",",
+							"    \"originalPrice\",",
+							"    \"loyaltyType\",",
+							"    \"customerType\",",
+							"    \"discountOnProduct\",",
+							"     \"discountPercent\"",
+							"  ]",
+							"};",
+							"",
+							"pm.test(\"response must be valid and have a body\", function () {",
+							"  pm.response.to.not.be.error;",
+							"  pm.response.to.be.ok;",
+							"  pm.response.to.be.json;",
+							"  pm.response.to.have.jsonSchema(calculateDiscountSchema);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"originalPrice\": 20,\n\t\"loyaltyType\": 1,\n\t\"customerType\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://be81601c-7e4d-418e-a6b6-f517b3e5e422.mock.pstmn.io/discount",
+					"protocol": "https",
+					"host": [
+						"be81601c-7e4d-418e-a6b6-f517b3e5e422",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"discount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b10737bc-b2dc-41d0-afa6-6103e509dbbe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "27a2c9ae-8505-4489-a689-6c447cbc5642",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
